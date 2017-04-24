@@ -60,5 +60,10 @@
 echo "Type website here:"
 
 read command
+echo "you typed:"
+#"/n?"
+echo $command
+eval $command
+#maybe$()?
 echo $command
 #do stuff
