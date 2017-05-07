@@ -1,16 +1,12 @@
 class Cookie_Phishing < BeEF::Core::Command
 
  def self.options
-    @configuration = BeEF::Core::Configuration.instance
-    proto = @configuration.get("beef.http.https.enable") == true ? "https" : "http"
-    beef_host = @configuration.get("beef.http.public") || @configuration.get("beef.http.host")
-    beef_port = @configuration.get("beef.http.public_port") || @configuration.get("beef.http.port")
-    base_host = "#{proto}://#{beef_host}:#{beef_port}"
-
-     xss_hook_url = "#{base_host}/demos/basic.html"
-     logout_gmail_interval = 10000
-     wait_seconds_before_redirect = 1000
-     return [
+    configuration = BeEF::Core::Configuration.instance
+    proto = configuration.get("beef.http.https.enable") == true ? "https" : "http"
+    xss_hook_url = "#{base_host}/demos/basic.html"
+    logout_gmail_interval = 10000
+    wait_seconds_before_redirect = 1000
+    return [
         {'name' => 'xss_hook_url', 
          'description' => 'The URI including the XSS to hook a browser. If the XSS is not exploitable via an URI, simply leave this field empty, but this means you will loose the hooked browser after executing this module.',
          'ui_label' => 'XSS hook URI',
