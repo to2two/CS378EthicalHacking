@@ -1,0 +1,10 @@
+beef:
+  module:
+    phishing:
+      enable: true
+      category: "Socail Engineering"
+      name: "Cookie Phishing"
+      description: "This plugin uses get the user to enter their credentials and to get the cookie which can be used for a crsf attack"
+      author: ["Anthony, Midora & Dillon"]
+      target: 
+        user_notify: ['ALL']
