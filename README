@@ -1,0 +1,15 @@
+Direction For Installing Autocracker (on Kali)
+
+1) Install MITMF and its dependency
+	apt-get install mitmf
+	pip uninstall twisted 
+		current version of twisted breaks mitmf injections
+	pip install twisted==15.5.0
+
+2) Install the Cookie-Expoilt Module
+	move the Cookie-Expoilt folder into /usr/share/beef-xss/module/social engineering
+
+
+
+
+The module should appear in the Social Engineering folder in the BeEF interface

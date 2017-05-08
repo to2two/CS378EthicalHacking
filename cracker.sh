@@ -22,7 +22,8 @@ echo "Your IP is $yours, Router is $router, Target is $target"
 
 
 echo "Staring BeEF ... "
-cd /usr/share/beef-xss; ./beef > /root/Desktop/boutput.txt
+cd /usr/share/beef-xss
+./beef > /root/Desktop/boutput.txt
 #BeEf output in boutput.txt
 #parse obutput.txt
 r=Hook 
